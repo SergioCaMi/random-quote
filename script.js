@@ -29,3 +29,12 @@ const quotes = [
         author: " Tyne Daly"
     }
 ];
+
+const miBoton = document.querySelector(".btn");
+
+
+miBoton.addEventListener("click", event=>{
+    let newIndex = Math.floor(Math.random()*(quotes.length-1));
+    document.querySelector(".quote--text").textContent = quotes[newIndex].quote;
+    document.querySelector(".quote--author").textContent = quotes[newIndex].author;
+});
